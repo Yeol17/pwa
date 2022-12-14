@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>계산기</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="icn512x512.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+
+
+
+  <script src="js/main.js" defer></script>
+
+
+</head>
+
+<!--계산기버튼구현-->
+
+<body>
+
+  <div class="calc_wrap">
+
+    <div class="row">
+      <button id="bksp"> Del</button>
+      <input readonly id="operator">
+      <input readonly id="result">
+    </div>
+    <div class="row">
+      <button id="num-7">7</button>
+      <button id="num-8">8</button>
+      <button id="num-9">9</button>
+      <button id="plus">+</button>
+    </div>
+    <div class="row">
+      <button id="num-4">4</button>
+      <button id="num-5">5</button>
+      <button id="num-6">6</button>
+      <button id="minus">-</button>
+    </div>
+    <div class="row">
+      <button id="num-1">1</button>
+      <button id="num-2">2</button>
+      <button id="num-3">3</button>
+      <button id="divide">/</button>
+    </div>
+    <div class="row">
+      <button id="clear">C</button>
+      <button id="num-0">0</button>
+      <button id="calculate">=</button>
+      <button id="multiply">x</button>
+    </div>
+
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('service_worker.js')
+        .then(function () {
+          console.log('서비스 워커가 등록됨!');
+        })
+    }
+  </script>
+</body>
+
+</html>

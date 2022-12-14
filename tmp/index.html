@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>블랙 베히모스</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- safari 인식 오류 해결-->
+  <link rel="apple-touch-icon" href="images/short_icn512x512.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/short_icn192x192.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="images/short_icn192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/short_icn192x192.png">
+
+  <script src="js/main.js" defer></script>
+
+</head>
+<body>
+  <div class="wrap">
+    <!-- <header>
+      <nav class="gnb">
+        <button type="button">메뉴</button>
+      </nav>
+    </header> -->
+    <main id="main" class="contents">
+      <section class="top-contents">
+        <div class="wrapper">
+          <div class="top_bg">
+            <img src="images/bg01.jpg" alt="">
+            <div class="bg-linear"></div>
+          </div>
+
+        </div>
+      </section>
+      <section class="main-contents"></section>
+      <section class="bottom-contents"></section>
+    </main>
+    <footer></footer>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./service_worker.js')
+        .then(function () {
+          console.log('서비스 워커가 등록됨!');
+        })
+    }
+  </script>
+</body>
+
+</html>
