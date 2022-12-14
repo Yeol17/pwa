@@ -3,11 +3,9 @@ const aFilesToCache = [ // 캐시할 파일 지정
   './',
   './index.html',
   './manifest.json',
-  'icn512x512.png',
-  'images/favicon-96x96.png',
-  'images/android-icon-192x192.png',
-  'images/apple-icon-152x152.png',
-  'images/apple-icon-180x180.png'
+  'images/favicon512x512.png',
+  'images/favicon192x192.png',
+  'images/favicon96x96.png',
 ];
 // 서비스워커 실행 & 캐시파일 저장
 self.addEventListener("install", pEvent => {
